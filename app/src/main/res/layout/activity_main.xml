@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/witaj_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4px"
+                android:padding="8dp"
+                android:text="Witaj"
+                android:textAlignment="center"
+                android:textSize="80px"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/wynik_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginRight="54dp"
+                android:layout_marginBottom="14dp"
+                android:padding="2dp"
+                android:text="Wpisz ilość i rozmiar wygeneruj losowe dane a następnie je posortuj"
+                android:textAlignment="center"
+                android:textSize="60px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingHorizontal="25dp">
+                    <TextView
+                        android:id="@+id/ilosc_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4px"
+                        android:text="Ilość"
+                        android:textAlignment="center"
+                        android:textSize="60px"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="25dp"/>
+                    <EditText
+                        android:id="@+id/ilosc_inp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:paddingHorizontal="25dp">
+                    <TextView
+                        android:id="@+id/rozmiar_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4px"
+                        android:text="Rozmiar"
+                        android:textAlignment="center"
+                        android:textSize="60px"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="25dp"/>
+                    <EditText
+                        android:id="@+id/rozmiar_inp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:inputType="number" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/wylosuj_btn"
+                android:layout_width="450px"
+                android:layout_height="wrap_content"
+                android:text="Wylosuj Dane"
+                android:layout_marginBottom="15dp"/>
+            <TextView
+                android:id="@+id/dane_surowe_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4px"
+                android:padding="8dp"
+                android:text="Tutaj pojawią się dane"
+                android:textAlignment="center"
+                android:textSize="50px"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"/>
+            <Button
+                android:id="@+id/segreguj_btn"
+                android:layout_width="450px"
+                android:layout_height="wrap_content"
+                android:text="Segreguj Dane"
+                android:layout_marginBottom="15dp"/>
+            <TextView
+                android:id="@+id/dane_posegregowane_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4px"
+                android:padding="8dp"
+                android:text="Tutaj pojawią się posgregowane dane"
+                android:textAlignment="center"
+                android:textSize="50px"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="39dp" />
+            <TextView
+                android:id="@+id/czas_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4px"
+                android:padding="8dp"
+                android:text="Program wykonano w czasie"
+                android:textAlignment="center"
+                android:textSize="50px"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:id="@+id/czas_number_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1px"
+                android:padding="8dp"
+                android:text="5s"
+                android:textAlignment="center"
+                android:textSize="100px"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
